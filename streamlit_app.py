@@ -237,7 +237,7 @@ def load_or_train():
     svm = SVC(kernel='rbf', C=10, gamma='scale', class_weight='balanced',
               probability=True, random_state=42)
     lr  = LogisticRegression(C=1.0, class_weight='balanced', max_iter=1000,
-                              random_state=42, multi_class='multinomial')
+                              random_state=42, solver='lbfgs')
 
     loo = LeaveOneOut()
     model_results = {}
